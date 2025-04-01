@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahtzee</title>
+    <link rel="stylesheet" type="text/css" href="Yahtzee.css"/>
+</head>
+<body>
+    <div id="game-container">
+        <div id="board">
+            <h3>Score: </h3>
+            <h3 id="Score">0</h3>
+        </div>
+
+        <div id="dice-container">
+            <img id="dice1" src="" alt="Dice 1">
+            <img id="dice2" src="" alt="Dice 2">
+            <img id="dice3" src="" alt="Dice 3">
+            <img id="dice4" src="" alt="Dice 4">
+            <img id="dice5" src="" alt="Dice 5">
+        </div>
+
+        <input id="rollButton" class="but" type="button" value="Roll" onclick="Dobbel()">
+
+        <div id="scoreboard">
+            <h2 class="SB">Scoreboard</h2> 
+            <div class="score-row">
+                <h4 class="SC">Three Of A Kind</h4>
+                <input id="TOAK" class="but8" type="button" value="three of a kind" onclick="ThreeOfAKind()">
+                <span id="three-of-a-kind">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="SC2">Carré</h4>
+                <input id="Carrer" class="but7" type="button" value="Carré" onclick="Carre()">
+                <span id="Carre">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="SC3">Full House</h4>
+                <input id="FullHouse" class="but6" type="button" value="Full House" onclick="FullHouse()">
+                <span id="full-house">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="SC4">Kleine Straat</h4>
+                <input id="Kstraat" class="but5" type="button" value="Kleine Straat" onclick="KleineStraat()">
+                <span id="kleine-straat">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="SC5">Grote Straat</h4>
+                <input id="Gstraat" class="but4" type="button" value="Grote Straat" onclick="GroteStraat()">
+                <span id="grote-straat">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="SC6">Yahtzee:</h4>
+                <input id="Yahtzee" class="but2" type="button" value="Yahtzee" onclick="YahtzeeF()">
+                <span id="yahtzee-score">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="SC7">Chance:</h4>
+                <input id="Chance" class="but3" type="button" value="Chance" onclick="Chance()">
+                <span id="chance-score">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="SC8">Bovenste helft:</h4>
+                <span id="Bovenste-helft">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="Een">Enen:</h4>
+                <input id="Eenvast" class="but9" type="button" value="Enen" onclick="EenPressedFunc()">
+                <span id="score-enen">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="Twee">Tweeën:</h4>
+                <input id="Tweevast" class="but10" type="button" value="Tweeën" onclick="tweePressedFunc()">
+                <span id="score-tweeën">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="Twee" id="Drieën">Drieën</h4>
+                <input id="Drievast" class="but11" type="button" value="Drieën" onclick="driePressedFunc()">
+                <span id="score-drieën">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="Twee">Vieren:</h4>
+                <input id="viervast" class="but12" type="button" value="Vieren" onclick="vierPressedFunc()">
+                <span id="score-vieren">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="Twee">Vijven:</h4>
+                <input id="vijfvast" class="but13" type="button" value="Vijven" onclick="vijfPressedFunc()">
+                <span id="score-vijven">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="Twee">Zessen:</h4>
+                <input id="zesvast" class="but14" type="button" value="Zessen" onclick="zesPressedFunc()">
+                <span id="score-zessen">0</span>
+            </div>
+            <div class="score-row">
+                <h4 class="SC8">Onderste helft:</h4>
+                <span id="Onderste-helft">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="Yahtzee.js"></script>
+</body>
+</html>
