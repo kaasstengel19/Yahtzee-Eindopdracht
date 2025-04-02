@@ -48,12 +48,12 @@ if(rollcount !== 3){
 
     }
     
-    if (rollcount === 2) { 
-        const rollButton = document.getElementById('rollButton');
+    // if (rollcount === 2) { 
+    //     const rollButton = document.getElementById('rollButton');
         
-        // rollButton.disabled = true;
-        rollButton.value = "Out Of Rolls";
-    }
+    //     // rollButton.disabled = true;
+    //     rollButton.value = "Out Of Rolls";
+    // }
     
 }
 
