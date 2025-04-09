@@ -48,24 +48,19 @@ if(rollcount !== 3){
 
     }
     
-    // if (rollcount === 2) { 
-    //     const rollButton = document.getElementById('rollButton');
+    if (rollcount === 2) { 
+        const rollButton = document.getElementById('rollButton');
         
-    //     // rollButton.disabled = true;
-    //     rollButton.value = "Out Of Rolls";
-    // }
+        // rollButton.disabled = true;
+        rollButton.value = "Out Of Rolls";
+    }
     
 }
 
 
     rollcount++;
 
-    tellen1s();
-    tellen2s();
-    tellen3s();
-    tellen4s();
-    tellen5s();
-    tellen6s();
+
     Chance();
     GroteStraat();
     KleineStraat();
@@ -89,208 +84,6 @@ function hold(index, diceElement){
     console.log("Dice " + (index + 1) + (lockedDice[index] ? " locked" : " unlocked"));
 }
 
-let EenPressed = false;
-
-function EenPressedFunc(){
-    if(EenPressed)return;
-    const Eenvast = document.getElementById('Eenvast');
-    const result1 = tellen1s();
-    document.getElementById("score-enen").innerHTML = result1;
-    EenPressed = true;
-    Eenvast.disabled = true;
-    OndersteHelft += result1;
-    document.getElementById("Onderste-helft").innerHTML = OndersteHelft;
-    totalScore += result1;
-    document.getElementById("Score").innerHTML = totalScore;
-    Dobbel();
-}
-
-
-
-function tellen1s(){
-    let result1 = 0;
-
-    for(let i = 0; i < currentDices.length; i++){
-        let diceSrc = currentDices[i].getAttribute('src');
-        if(diceSrc === 'dob1.png'){
-            result1++;
-        }
-    }
-
-    console.log(result1 + " 1s");
-
-    return result1;
-    
-}
-
-let TweePressed = false;
-
-function tweePressedFunc(){
-    if(TweePressed)return;
-    const Tweevast = document.getElementById('Tweevast');
-    const result2 = tellen2s();
-            document.getElementById("score-tweeën").innerHTML = result2 * 2;
-            TweePressed = true;
-            Tweevast.disabled = true;
-            OndersteHelft += result2 * 2;
-            document.getElementById("Onderste-helft").innerHTML = OndersteHelft;
-            totalScore += result2 * 2;
-            document.getElementById("Score").innerHTML = totalScore;
-            Dobbel();
-}
-
-
-
-function tellen2s(){
-    let result2 = 0;
-    
-    for(let i = 0; i < currentDices.length; i++){
-        let diceSrc = currentDices[i].getAttribute('src');
-        if(diceSrc === 'dob2.png'){
-            result2++;
-        }
-    }
-    
-    console.log(result2 + " 2s");
-
-    return result2;
-    
-}
-
-let driePressed = false;
-
-function driePressedFunc(){
-    if(driePressed)return;
-    const drievast = document.getElementById('Drievast');
-    const result3 = tellen3s();
-            document.getElementById("score-drieën").innerHTML = result3 * 3;
-            driePressed = true;
-            drievast.disabled = true;
-            OndersteHelft += result3 * 3;
-            document.getElementById("Onderste-helft").innerHTML = OndersteHelft;
-            totalScore += result3 * 3;
-            document.getElementById("Score").innerHTML = totalScore;
-            Dobbel();
-}
-
-
-
-function tellen3s(){
-    let result3 = 0;
-
-    for(let i = 0; i < currentDices.length; i++){
-        let diceSrc = currentDices[i].getAttribute('src');
-        
-        if(diceSrc === 'dob3.png'){
-            result3++;
-        }
-    }
-
-    console.log(result3 + " 3s");
-
-    return result3;
-}
-
-let vierPressed = false;
-
-function vierPressedFunc(){
-    if(vierPressed)return;
-    const viervast = document.getElementById('viervast');
-    const result4 = tellen4s();
-    document.getElementById("score-vieren").innerHTML = result4 * 4;
-            vierPressed = true;
-            viervast.disabled = true;
-            OndersteHelft += result4 * 4;
-            document.getElementById("Onderste-helft").innerHTML = OndersteHelft;
-            totalScore += result4 * 4;
-            document.getElementById("Score").innerHTML = totalScore;
-            Dobbel();
-}
-
-
-
-function tellen4s(){
-    let result4 = 0;
-
-    for(let i = 0; i < currentDices.length; i++){
-        let diceSrc = currentDices[i].getAttribute('src');
-        
-        if(diceSrc === 'dob4.png'){
-            result4++;
-        }
-    }
-
-    console.log(result4 + " 4s");
-    return result4;
-}
-
-let vijfPressed = false;
-
-function vijfPressedFunc(){
-    if(vijfPressed)return;
-    const vijfvast = document.getElementById('vijfvast');
-    const result5 = tellen5s();
-    document.getElementById("score-vijven").innerHTML = result5 * 5;
-            vijfPressed = true;
-            vijfvast.disabled = true;
-            OndersteHelft += result5 * 5;
-            document.getElementById("Onderste-helft").innerHTML = OndersteHelft;
-            totalScore += result5 * 5;
-            document.getElementById("Score").innerHTML = totalScore;
-            Dobbel();
-}
-
-
-
-function tellen5s(){
-    let result5 = 0;
-
-    for(let i = 0; i < currentDices.length; i++){
-        let diceSrc = currentDices[i].getAttribute('src');
-        
-        if(diceSrc === 'dob5.png'){
-            result5++;
-        }
-    }
-
-
-    console.log(result5 + " 5s");
-    return result5;
-}
-
-let zesPressed = false;
-
-function zesPressedFunc(){
-    if(zesPressed)return;
-    const zesvast = document.getElementById('zesvast');
-    const result6 = tellen6s();
-    document.getElementById("score-zessen").innerHTML = result6 * 6;
-            zesPressed = true;
-            zesvast.disabled = true;
-            OndersteHelft += result6 * 6;
-            document.getElementById("Onderste-helft").innerHTML = OndersteHelft;
-            totalScore += result6 * 6;
-            document.getElementById("Score").innerHTML = totalScore;
-            Dobbel();
-}
-
-
-
-function tellen6s(){
-    let result6 = 0;
-
-    for(let i = 0; i < currentDices.length; i++){
-        let diceSrc = currentDices[i].getAttribute('src');
-        
-        if(diceSrc === 'dob6.png'){
-            result6++;
-        }
-    }
-
-
-    console.log(result6 + " 6s");
-    return result6;
-}
 
 let isYahtzeePressed = false;
 
@@ -299,12 +92,12 @@ function YahtzeeF(){
     if (isYahtzeePressed) return;
 
     const Yahtzee = document.getElementById('Yahtzee');
-    const result1 = tellen1s();
-    const result2 = tellen2s();
-    const result3 = tellen3s();
-    const result4 = tellen4s();
-    const result5 = tellen5s();
-    const result6 = tellen6s();
+    const result1 = tellen('dob1.png');
+    const result2 = tellen('dob2.png');
+    const result3 = tellen('dob3.png');
+    const result4 = tellen('dob4.png');
+    const result5 = tellen('dob5.png');
+    const result6 = tellen('dob6.png');
     
     const values = [result1, result2, result3, result4, result5, result6];
     let Y1 = false;
@@ -317,7 +110,6 @@ if (values[i] >= 5) {
 Yahtzee.disabled = true;
 if(Y1 == true && isYahtzeePressed == false){
     Yahtzee.disabled = false;
-Yahtzee.addEventListener("click", function(){
     Yahtzee.disabled = true;
     if (isYahtzeePressed) return;
     Yahtzee.disabled = true;
@@ -329,7 +121,6 @@ isYahtzeePressed = true;
 totalScore += 50;
 document.getElementById("Score").innerHTML = totalScore;
 Dobbel();
-});
 }
 }
 
@@ -340,12 +131,12 @@ function Chance(){
 if (chancePressed) return;
 
     const Chance = document.getElementById('Chance');
-    const result1 = tellen1s();
-    const result2 = tellen2s();
-    const result3 = tellen3s();
-    const result4 = tellen4s();
-    const result5 = tellen5s();
-    const result6 = tellen6s();
+    const result1 = tellen('dob1.png');
+    const result2 = tellen('dob2.png');
+    const result3 = tellen('dob3.png');
+    const result4 = tellen('dob4.png');
+    const result5 = tellen('dob5.png');
+    const result6 = tellen('dob6.png');
     Tjans = result1 + (result2 * 2) + (result3 * 3) + (result4 * 4) + (result5 * 5) + (result6 * 6);
     document.getElementById("chance-score").innerHTML = Tjans;
         Chance.addEventListener("click", function(){
@@ -367,12 +158,12 @@ function GroteStraat(){
     if (GroteStraatPressed) return;
 
     const Gstraat = document.getElementById("Gstraat");
-    const result1 = tellen1s(); 
-    const result2 = tellen2s();
-    const result3 = tellen3s();
-    const result4 = tellen4s();
-    const result5 = tellen5s();
-    const result6 = tellen6s();
+    const result1 = tellen('dob1.png');
+    const result2 = tellen('dob2.png');
+    const result3 = tellen('dob3.png');
+    const result4 = tellen('dob4.png');
+    const result5 = tellen('dob5.png');
+    const result6 = tellen('dob6.png');
 
     
     Gstraat.disabled = true;
@@ -402,12 +193,12 @@ function KleineStraat() {
     if (KleineStraatPressed) return;
 
     const Kstraat = document.getElementById("Kstraat");
-    const result1 = tellen1s(); 
-    const result2 = tellen2s();
-    const result3 = tellen3s();
-    const result4 = tellen4s();
-    const result5 = tellen5s();
-    const result6 = tellen6s();
+    const result1 = tellen('dob1.png');
+    const result2 = tellen('dob2.png');
+    const result3 = tellen('dob3.png');
+    const result4 = tellen('dob4.png');
+    const result5 = tellen('dob5.png');
+    const result6 = tellen('dob6.png');
     
 
     if (
@@ -443,12 +234,12 @@ function FullHouse(){
     if(FullHousePressed) return;
 
     const FH = document.getElementById("FullHouse");
-    const result1 = tellen1s(); 
-    const result2 = tellen2s();
-    const result3 = tellen3s();
-    const result4 = tellen4s();
-    const result5 = tellen5s();
-    const result6 = tellen6s();
+    const result1 = tellen('dob1.png');
+    const result2 = tellen('dob2.png');
+    const result3 = tellen('dob3.png');
+    const result4 = tellen('dob4.png');
+    const result5 = tellen('dob5.png');
+    const result6 = tellen('dob6.png');
 
     FH.disabled = true;
 
@@ -490,12 +281,12 @@ function Carre(){
     if (isCarrePressed) return;
 
         const Carrer = document.getElementById('Carrer');
-        const result1 = tellen1s();
-        const result2 = tellen2s();
-        const result3 = tellen3s();
-        const result4 = tellen4s();
-        const result5 = tellen5s();
-        const result6 = tellen6s();
+        const result1 = tellen('dob1.png');
+        const result2 = tellen('dob2.png');
+        const result3 = tellen('dob3.png');
+        const result4 = tellen('dob4.png');
+        const result5 = tellen('dob5.png');
+        const result6 = tellen('dob6.png');
         
         const values = [result1, result2, result3, result4, result5, result6];
         let c1 = false;
@@ -534,12 +325,12 @@ if (c1 == true) {
         if (isThreeOfAKindPressed) return;
 
         const TOAK = document.getElementById("TOAK");
-        const result1 = tellen1s();
-        const result2 = tellen2s();
-        const result3 = tellen3s();
-        const result4 = tellen4s();
-        const result5 = tellen5s();
-        const result6 = tellen6s();
+        const result1 = tellen('dob1.png');
+        const result2 = tellen('dob2.png');
+        const result3 = tellen('dob3.png');
+        const result4 = tellen('dob4.png');
+        const result5 = tellen('dob5.png');
+        const result6 = tellen('dob6.png');
         
         const values = [result1, result2, result3, result4, result5, result6];
         let T1 = false;
@@ -566,4 +357,86 @@ if (c1 == true) {
             document.getElementById("Score").innerHTML = totalScore;
             Dobbel();
         });}else{TOAK.disabled = true;}
+}
+
+
+
+
+
+
+function tellen(diceValue) {
+    let result = 0;
+    for (let i = 0; i < currentDices.length; i++) {
+        let diceSrc = currentDices[i].getAttribute('src');
+        if (diceSrc === diceValue) {
+            result++;
+        }
+    }
+    console.log(result + " " + diceValue);
+    return result;
+}
+
+
+
+function PressedFunc(diceValue, multiplier, buttonId, scoreId, scoreKey) {
+    if (window[scoreKey]) return;
+
+    const button = document.getElementById(buttonId);
+    const result = tellen(diceValue);
+    const score = result * multiplier;
+
+    document.getElementById(scoreId).innerHTML = score;
+
+    window[scoreKey] = true;
+    button.disabled = true;
+
+    OndersteHelft += score;
+    document.getElementById("Onderste-helft").innerHTML = OndersteHelft;
+
+    totalScore += score;
+    document.getElementById("Score").innerHTML = totalScore;
+
+    Dobbel();
+
+    const rollButton = document.getElementById('rollButton');
+    rollButton.disabled = false;
+    rollButton.value = "Roll";
+    rollcount = 0;
+
+    // Reset locked dice
+    // for (let i = 0; i < lockedDice.length; i++) {
+    //     lockedDice[i] = false;
+    // }
+}
+
+
+
+let EenPressed = false;
+function EenPressedFunc() {
+    PressedFunc('dob1.png', 1, 'Eenvast', 'score-enen', 'EenPressed');
+}
+
+let TweePressed = false;
+function tweePressedFunc() {
+    PressedFunc('dob2.png', 2, 'Tweevast', 'score-tweeën', 'TweePressed');
+}
+
+let driePressed = false;
+function driePressedFunc() {
+    PressedFunc('dob3.png', 3, 'Drievast', 'score-drieën', 'driePressed');
+}
+
+let vierPressed = false;
+function vierPressedFunc() {
+    PressedFunc('dob4.png', 4, 'viervast', 'score-vieren', 'vierPressed');
+}
+
+let vijfPressed = false;
+function vijfPressedFunc() {
+    PressedFunc('dob5.png', 5, 'vijfvast', 'score-vijven', 'vijfPressed');
+}
+
+let zesPressed = false;
+function zesPressedFunc() {
+    PressedFunc('dob6.png', 6, 'zesvast', 'score-zessen', 'zesPressed');
 }
